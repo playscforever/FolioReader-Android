@@ -83,6 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
                     android:src="@drawable/icon_font" />
 
                 <ImageView
@@ -93,11 +94,6 @@
                     android:src="@drawable/man_speech_icon" />
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_alignParentBottom="true"
-                android:background="@android:color/black" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 

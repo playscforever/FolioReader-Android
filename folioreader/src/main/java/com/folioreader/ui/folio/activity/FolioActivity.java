@@ -142,9 +142,7 @@ public class FolioActivity
 
         setConfig();
 
-        if (!mConfig.isShowTts()) {
-            findViewById(R.id.btn_speaker).setVisibility(View.GONE);
-        }
+        findViewById(R.id.btn_speaker).setVisibility(View.GONE);
 
         title = (TextView) findViewById(R.id.lbl_center);
         slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
