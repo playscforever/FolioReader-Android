@@ -2,31 +2,31 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'folioreader'
+    bintrayName = 'folioreaderforyzj'
 
-    publishedGroupId = 'com.folioreader'
-    libraryName = 'WebViewMarker'
-    artifact = 'webViewMarker'
+    publishedGroupId = 'com.folioreaderforyzj'
+    libraryName = 'FolioReaderForYzj'
+    artifact = 'folioreaderforyzj'
 
     libraryDescription = 'An epub reader for Android'
 
-    siteUrl = 'https://github.com/FolioReader/FolioReader-Android'
-    gitUrl = 'https://github.com/FolioReader/FolioReader-Android.git'
+    siteUrl = 'https://github.com/playscforever/FolioReader-Android'
+    gitUrl = 'https://github.com/playscforever/FolioReader-Android.git'
 
-    libraryVersion = '0.3.1'
+    libraryVersion = '1.0.0'
 
-    developerId = 'mobisystech'
-    developerName = 'Folio Reader'
-    developerEmail = 'mahavir@codetoart.com'
+    developerId = 'playSCforever'
+    developerName = 'ZhangJin Yan'
+    developerEmail = '471749824@qq.com'
 
-    licenseName = 'FreeBSD License'
-    licenseUrl = 'https://en.wikipedia.org/wiki/FreeBSD_Documentation_License#License'
-    allLicenses = ["FreeBSD"]
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         versionCode Integer.parseInt(project.VERSION_CODE)
