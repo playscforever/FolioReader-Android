@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">folioreader</string>
+    <string name="app_name">氧气文学</string>
     <string name="andada">Andada</string>
     <string name="lato">Lato</string>
     <string name="lora">Lora</string>
@@ -15,12 +15,12 @@
     <string name="less_than_minute">Less than a minute ·&#160;</string>
 
     <string name="copied">Copied</string>
-    <string name="send_to">Send to</string>
+    <string name="send_to">发送给</string>
 
-    <string name="copy">Copy</string>
-    <string name="share">Share</string>
-    <string name="define">Define</string>
-    <string name="highlight">Highlight</string>
+    <string name="copy">复制</string>
+    <string name="share">分享</string>
+    <string name="define">定义</string>
+    <string name="highlight">标注</string>
 
     <string name="pages_left">%1$d pages left</string>
     <string name="page_left">%1$d page left</string>

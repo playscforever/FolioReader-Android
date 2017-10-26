@@ -46,16 +46,16 @@ public class HomeActivity extends AppCompatActivity implements OnHighlightListen
         setContentView(R.layout.activity_home);
         folioReader = new FolioReader(this);
         folioReader.registerHighlightListener(this);
-        findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                folioReader.openBook("file:///android_asset/adventures.epub");
-            }
-        });
         findViewById(R.id.btn_raw).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                folioReader.openBook(R.raw.barrett);
+                folioReader.openBook(R.raw.test);
+            }
+        });
+        findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                folioReader.openBook(R.raw.test2);
             }
         });
         getHighlightsAndSave();
