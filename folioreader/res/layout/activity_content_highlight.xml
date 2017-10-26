@@ -47,7 +47,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center|end"
+                    android:gravity="center"
                     android:padding="5dp"
                     android:text="@string/contents"
                     android:textSize="16sp" />
@@ -57,18 +57,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center|start"
+                    android:gravity="center"
                     android:padding="5dp"
                     android:text="@string/highlights"
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_alignParentBottom="true"
-                android:background="@android:color/black" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
