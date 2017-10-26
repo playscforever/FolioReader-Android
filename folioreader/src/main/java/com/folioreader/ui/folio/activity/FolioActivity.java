@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -199,6 +200,15 @@ public class FolioActivity
             title.setTextColor(ContextCompat.getColor(FolioActivity.this, R.color.white));
             audioContainer.setBackgroundColor(ContextCompat.getColor(FolioActivity.this, R.color.night));
         }
+
+        mToolbar.setVisibility(View.INVISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mToolbar.setY(mToolbar.getY() - mToolbar.getHeight());
+                mToolbar.setVisibility(View.VISIBLE);
+            }
+        }, 1111);
     }
 
     private void initBook(String mEpubFileName, int mEpubRawId, String mEpubFilePath, EpubSourceType mEpubSourceType) {
