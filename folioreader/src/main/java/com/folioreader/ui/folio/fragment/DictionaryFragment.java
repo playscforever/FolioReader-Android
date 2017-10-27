@@ -15,10 +15,12 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.folioreader.Config;
 import com.folioreader.Constants;
 import com.folioreader.R;
 import com.folioreader.model.dictionary.Dictionary;
@@ -28,6 +30,8 @@ import com.folioreader.ui.base.DictionaryTask;
 import com.folioreader.ui.base.WikipediaCallBack;
 import com.folioreader.ui.base.WikipediaTask;
 import com.folioreader.ui.folio.adapter.DictionaryAdapter;
+import com.folioreader.util.AppUtil;
+import com.folioreader.util.UiUtil;
 
 import java.io.IOException;
 
@@ -110,7 +114,8 @@ public class DictionaryFragment extends DialogFragment implements DictionaryCall
                 startActivity(intent);
             }
         });
-
+        Config mConfig = AppUtil.getSavedConfig(getActivity());
+        UiUtil.setColorToImage(getActivity(), mConfig.getThemeColor(), ((ImageView) view.findViewById(R.id.btn_close)).getDrawable());
         view.findViewById(R.id.btn_close).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

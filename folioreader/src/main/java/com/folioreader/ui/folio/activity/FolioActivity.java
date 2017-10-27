@@ -314,6 +314,7 @@ public class FolioActivity
         findViewById(R.id.btn_config).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                hideToolBarIfVisible();
                 mConfigBottomSheetDialogFragment = new ConfigBottomSheetDialogFragment();
                 mConfigBottomSheetDialogFragment.show(getSupportFragmentManager(), mConfigBottomSheetDialogFragment.getTag());
             }

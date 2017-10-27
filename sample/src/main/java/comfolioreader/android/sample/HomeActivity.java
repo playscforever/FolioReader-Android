@@ -20,7 +20,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -131,8 +130,8 @@ public class HomeActivity extends AppCompatActivity implements OnHighlightListen
 
     @Override
     public void onHighlight(HighLight highlight, HighLight.HighLightAction type) {
-        Toast.makeText(this,
-                "highlight id = " + highlight.getUUID() + " type = " + type,
-                Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,
+//                "highlight id = " + highlight.getUUID() + " type = " + type,
+//                Toast.LENGTH_SHORT).show();
     }
 }

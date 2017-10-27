@@ -33,7 +33,7 @@
                 android:src="@drawable/ic_close_green_24dp" />
 
             <LinearLayout
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
@@ -47,8 +47,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/style_back_color_selector"
-                    android:gravity="center|end"
-                    android:padding="5dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
                     android:text="@string/dictionary"
                     android:textColor="@drawable/content_highlight_text_selector"
                     android:textSize="16sp" />
@@ -59,8 +62,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/style_back_color_selector"
-                    android:gravity="center|start"
-                    android:padding="5dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
                     android:text="@string/wikipedia"
                     android:textColor="@drawable/content_highlight_text_selector"
                     android:textSize="16sp" />
