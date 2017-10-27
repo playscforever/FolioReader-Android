@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity implements OnHighlightListen
         findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                folioReader.openBook(R.raw.test2);
+                folioReader.openBook(R.raw.barrett);
             }
         });
         getHighlightsAndSave();

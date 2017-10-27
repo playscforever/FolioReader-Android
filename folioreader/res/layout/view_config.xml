@@ -9,6 +9,7 @@
         android:id="@+id/top_buttons"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:orientation="horizontal">
         <ImageButton
             android:id="@+id/day_button"
@@ -26,6 +27,7 @@
             android:src="@drawable/icon_moon_normal" />
     </LinearLayout>
     <View
+        android:visibility="gone"
         android:id="@+id/first_separator"
         android:layout_width="match_parent"
         android:layout_height="1dp"
