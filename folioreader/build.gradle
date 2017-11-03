@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/playscforever/FolioReader-Android'
     gitUrl = 'https://github.com/playscforever/FolioReader-Android.git'
 
-    libraryVersion = '1.1.2'
+    libraryVersion = '1.1.4'
 
     developerId = 'playSCforever'
     developerName = 'ZhangJin Yan'
@@ -90,3 +90,7 @@ dependencies {
     compile 'com.daimajia.swipelayout:library:1.2.0@aar'
     compile 'com.squareup:otto:1.3.8'
 }
+
+
+apply from: '../folioreader/bintray/installv1.gradle'
+apply from: '../folioreader/bintray/bintrayv1.gradle'

@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/playscforever/FolioReader-Android'
     gitUrl = 'https://github.com/playscforever/FolioReader-Android.git'
 
-    libraryVersion = '1.1.2'
+    libraryVersion = '1.1.4'
 
     developerId = 'playSCforever'
     developerName = 'ZhangJin Yan'

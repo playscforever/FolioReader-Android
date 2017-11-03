@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.folioreader.Config;
 import com.folioreader.R;
+import com.folioreader.util.UiUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -131,7 +132,7 @@ public class ContentsFragment extends Fragment {
                         holder.line.setBackgroundColor(Color.BLACK);
                     }
                 } else {
-                    holder.tocTitleView.setTextColor(Color.GREEN);
+                    holder.tocTitleView.setTextColor(UiUtil.getColorList(getActivity(), R.color.app_green, R.color.app_green));
                     if (mIsNightMode) {
                         holder.line.setBackgroundColor(Color.WHITE);
                     }

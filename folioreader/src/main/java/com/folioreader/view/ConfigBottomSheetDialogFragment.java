@@ -12,15 +12,16 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.folioreader.Config;
-import com.folioreader.Constants;
 import com.folioreader.R;
 import com.folioreader.activity.FolioActivity;
 import com.folioreader.model.ReloadData;
+import com.folioreader.util.UiUtil;
 
 
 /**
