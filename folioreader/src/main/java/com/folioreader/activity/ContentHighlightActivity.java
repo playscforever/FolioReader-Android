@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.folioreader.Config;
@@ -13,7 +14,6 @@ import com.folioreader.Constants;
 import com.folioreader.R;
 import com.folioreader.fragments.ContentsFragment;
 import com.folioreader.fragments.HighlightListFragment;
-import com.folioreader.util.AppUtil;
 import com.folioreader.util.UiUtil;
 
 import nl.siegmann.epublib.domain.Book;
@@ -27,7 +27,9 @@ public class ContentHighlightActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_highlight);
-        getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         mBook = (Book) getIntent().getSerializableExtra(Constants.BOOK);
         mSelectedChapterPosition = getIntent().getIntExtra(Constants.SELECTED_CHAPTER_POSITION, 0);
         mIsNightMode = Config.getConfig().isNightMode();
@@ -46,6 +48,8 @@ public class ContentHighlightActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.btn_highlights))
                     .setTextColor(UiUtil.getColorList(ContentHighlightActivity.this, R.color.black, R.color.app_green));
         }
+
+        UiUtil.setColorToImage(this, R.color.app_green, ((ImageView) findViewById(R.id.btn_close)).getDrawable());
 
         loadContentFragment();
         findViewById(R.id.btn_close).setOnClickListener(new View.OnClickListener() {

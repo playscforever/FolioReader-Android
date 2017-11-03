@@ -9,6 +9,7 @@
         android:id="@+id/top_buttons"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:orientation="horizontal">
         <ImageButton
             android:id="@+id/day_button"
@@ -84,6 +85,7 @@
         android:id="@+id/second_separator"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:visibility="gone"
         android:layout_below="@+id/fontLayout"
         android:background="@color/borders" />
     <RelativeLayout android:id="@+id/font_size_layout"

@@ -46,8 +46,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="5dp"
-                    android:gravity="center|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:gravity="center"
                     android:background="@drawable/style_back_color_selector"
                     android:text="@string/contents"
                     android:textColor="@drawable/content_highlight_text_selector"
@@ -57,19 +60,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
                     android:background="@drawable/style_back_color_selector"
-                    android:gravity="center|start"
+                    android:gravity="center"
                     android:text="@string/highlights"
                     android:textColor="@drawable/content_highlight_text_selector"
                     android:textSize="16sp" />
             </LinearLayout>
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_alignParentBottom="true"
-                android:background="@android:color/black" />
+
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <FrameLayout android:id="@+id/parent"

@@ -28,16 +28,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.folioreader.Constants;
 import com.folioreader.R;
 import com.folioreader.adapter.FolioPageFragmentAdapter;
 import com.folioreader.fragments.FolioPageFragment;
 import com.folioreader.model.Highlight;
-import com.folioreader.model.ReloadData;
-import com.folioreader.model.SmilElements;
 import com.folioreader.model.WebViewPosition;
 import com.folioreader.smil.AudioElement;
 import com.folioreader.smil.SmilFile;
@@ -47,6 +45,7 @@ import com.folioreader.util.AppUtil;
 import com.folioreader.util.EpubManipulator;
 import com.folioreader.util.FileUtil;
 import com.folioreader.util.ProgressDialog;
+import com.folioreader.util.UiUtil;
 import com.folioreader.view.AudioViewBottomSheetDailogFragment;
 import com.folioreader.view.ConfigBottomSheetDialogFragment;
 import com.folioreader.view.DirectionalViewpager;
@@ -137,7 +136,7 @@ public class FolioActivity extends AppCompatActivity implements
                 }
             }
         });
-
+        findViewById(R.id.btn_speaker).setVisibility(View.GONE);
         findViewById(R.id.btn_drawer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,6 +152,17 @@ public class FolioActivity extends AppCompatActivity implements
         });
 
         BUS.register(this);
+        initColors();
+
+        mToolbar.setVisibility(View.INVISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mToolbar.setY(mToolbar.getY() - mToolbar.getHeight());
+                mToolbar.setVisibility(View.VISIBLE);
+            }
+        }, 1111);
+
     }
 
     private void initBook() {
@@ -318,6 +328,7 @@ public class FolioActivity extends AppCompatActivity implements
         findViewById(R.id.btn_config).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                hideToolBarIfVisible();
                 mConfigBottomSheetDialogFragment = new ConfigBottomSheetDialogFragment();
                 mConfigBottomSheetDialogFragment.show(getSupportFragmentManager(), mConfigBottomSheetDialogFragment.getTag());
             }
@@ -326,6 +337,13 @@ public class FolioActivity extends AppCompatActivity implements
 
     private void saveBookState() {
         AppUtil.saveBookState(FolioActivity.this, mBook, mFolioPageViewPager.getCurrentItem(), mWebViewScrollPosition);
+    }
+
+    public void initColors() {
+        UiUtil.setColorToImage(this, R.color.app_green, ((ImageView) findViewById(R.id.btn_close)).getDrawable());
+        UiUtil.setColorToImage(this, R.color.app_green, ((ImageView) findViewById(R.id.btn_drawer)).getDrawable());
+        UiUtil.setColorToImage(this, R.color.app_green, ((ImageView) findViewById(R.id.btn_config)).getDrawable());
+        UiUtil.setColorToImage(this, R.color.app_green, ((ImageView) findViewById(R.id.btn_speaker)).getDrawable());
     }
 
     @Override

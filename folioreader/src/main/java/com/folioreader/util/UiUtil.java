@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -146,4 +148,9 @@ public class UiUtil {
         context.startActivity(Intent.createChooser(sendIntent,
                 context.getResources().getText(R.string.send_to)));
     }
+
+    public static void setColorToImage(Context context, int color, Drawable drawable) {
+        drawable.setColorFilter(ContextCompat.getColor(context, color), PorterDuff.Mode.SRC_ATOP);
+    }
+
 }
