@@ -2,27 +2,29 @@ apply plugin: 'com.android.library'
 apply from: '../config/quality/quality.gradle'
 
 ext {
-  bintrayRepo = 'maven'
-  bintrayName = 'folioreader'
+    bintrayRepo = 'maven'
+    bintrayName = 'folioreader'
 
-  publishedGroupId = 'com.folioreader'
-  libraryName = 'FolioReader'
-  artifact = 'folioreader'
+    publishedGroupId = 'com.folioreaderforyzj'
+    libraryName = 'FolioReader'
+    artifact = 'folioreader'
 
-  libraryDescription = 'An epub reader for Android'
 
-  siteUrl = 'https://github.com/FolioReader/FolioReader-Android'
-  gitUrl = 'https://github.com/FolioReader/FolioReader-Android.git'
+    libraryDescription = 'An epub reader for Android'
 
-  libraryVersion = '0.2.4'
+    siteUrl = 'https://github.com/playscforever/FolioReader-Android'
+    gitUrl = 'https://github.com/playscforever/FolioReader-Android.git'
 
-  developerId = 'mobisystech'
-  developerName = 'Folio Reader'
-  developerEmail = 'mahavir@codetoart.com'
+    libraryVersion = '1.1.2'
 
-  licenseName = 'FreeBSD License'
-  licenseUrl = 'https://en.wikipedia.org/wiki/FreeBSD_Documentation_License#License'
-  allLicenses = ["FreeBSD"]
+    developerId = 'playSCforever'
+    developerName = 'ZhangJin Yan'
+    developerEmail = '471749824@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
 }
 
 android {
